@@ -7,13 +7,13 @@ type Props = {
 };
 
 const SlugComponent = ({ image }: Props) => {
+  const [path, setPath] = useState<string | StaticImageData>("");
 
-   const [path, setPath] = useState<string | StaticImageData>("");
   return (
     <div>
-      <Image src= {path ? path : image[0]} alt='ecomerce' width={400} height={400}/>
+      <Image src={path ? path : image[0]} alt='ecommerce' width={400} height={400} />
+      
       <div className='flex items-center justify-evenly mx-auto mt-2'>
-
         {image.map((item, i) => (
           <div key={i} className='cursor-pointer'>
             <Image
@@ -25,10 +25,9 @@ const SlugComponent = ({ image }: Props) => {
             />
           </div>
         ))}
-
       </div>
     </div>
-  )
+  );
 }
 
-export default SlugComponent
+export default SlugComponent;

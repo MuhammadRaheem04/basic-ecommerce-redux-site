@@ -12,9 +12,9 @@ const SlugPage = () => {
   const { slug } = useParams();
   const router = useRouter();
   const handleBuyNow = () => {
-  sessionStorage.setItem("buyNowProduct", JSON.stringify([cartItem]));
-  router.push("/checkout?buyNow=true");
-};
+    sessionStorage.setItem("buyNowProduct", JSON.stringify([cartItem]));
+    router.push("/checkout?buyNow=true");
+  };
   const decodedSlug = decodeURIComponent(
     Array.isArray(slug) ? slug[0] : slug || ""
   ); // Decode spaces & special characters
@@ -46,7 +46,15 @@ const SlugPage = () => {
         <div className="container px-5 py-24 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             {/* Image  */}
-            <SlugComponent image={slugProduct?.image} />
+            <SlugComponent
+              image={
+                slugProduct?.image
+                  ? Array.isArray(slugProduct.image)
+                    ? slugProduct.image
+                    : [slugProduct.image] // wrap single image in an array
+                  : []
+              }
+            />
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 className="text-sm leading-relaxed scroll-m-20 font-semibold text-myBlackPara tracking-widest">
                 {slugProduct ? slugProduct.catagory : "No Category"}
