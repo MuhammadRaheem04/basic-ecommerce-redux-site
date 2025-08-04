@@ -5,7 +5,7 @@ export const products: Product[] = [
   {
     id: 1,
     title: "White Printed T-Shirt",
-    image: ["/images/t-shirt.webp"],
+    image: ["/images/T-Shirt.webp"],
     slug: "White women TShirt",
     description: "Best quality T-Shirt for women",
     price: 150,
@@ -18,7 +18,7 @@ export const products: Product[] = [
   {
     id: 2,
     title: "Black Printed T-Shirt",
-    image: ["/images/t-shirt-02.avif"],
+    image: ["/images/T-shirt-02.avif"],
     slug: "Black women TShirt",
     description: "Best quality T-Shirt for women",
     price: 250,

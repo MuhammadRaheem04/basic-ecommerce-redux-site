@@ -7,35 +7,7 @@ import { Product } from "@/app/utills/types";
 const BestSelling = () => {
   const product = useAppSelector((state) => state.product);
   const bestSell = product.slice(0, 3);
-  // const bestSell = [
-  //     {
-  //         src: "/images/t-shirt.webp",
-  //         alt: "T-Shirt",
-  //         title: "White Printed T-Shirt",
-  //         description: "Best quality T-Shirt for women",
-  //         price: 150,
-  //         catagory: "tops",
-  //         slug: "White TShirt"
-  //     },
-  //     {
-  //         src: "/images/t-shirt-02.avif",
-  //         alt: "T-Shirt",
-  //         title: "Black T-Shirt",
-  //         description: "Best quality black T-Shirt for women",
-  //         price: 200,
-  //         catagory: "tops",
-  //         slug: "Black TShirt"
-  //     },
-  //     {
-  //         src: "/images/shoes-01.avif",
-  //         alt: "shoes",
-  //         title: "British Style Women's Shoes",
-  //         description: "Best quality British Style Women's Shoes",
-  //         price: 500,
-  //          catagory: "shoes",
-  //         slug: "Women shoes"
-  //     }
-  // ]
+  
   return (
     <div className="mb-[100px] mt-[100px]">
       <div className="text-center mb-10">
